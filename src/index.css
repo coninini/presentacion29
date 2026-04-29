@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-primary: #4f46e5; /* Modern Indigo */
+  --color-brand-accent: #06b6d4;  /* Cyan */
+  --color-surface-base: #f8fafc;  /* Light Slate */
+  --color-surface-card: #ffffff;
+  --color-text-main: #0f172a;    /* Deep Slate */
+  --color-text-muted: #64748b;   /* Muted Slate */
+  --color-border-subtle: #e2e8f0;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-base text-text-main font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight text-text-main;
+  }
+}
+
+.presentation-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  @apply bg-surface-base;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.slide-content {
+  @apply max-w-6xl mx-auto px-8 md:px-16 py-20 h-full flex flex-col justify-center;
+}
+
+.bento-card {
+  @apply bg-white border border-border-subtle p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(79,70,229,0.08)] transition-all duration-300;
+}
+
+.chip {
+  @apply px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-brand-primary/20 text-brand-primary bg-brand-primary/5;
+}
+
+.nav-button {
+  @apply p-4 bg-white border border-border-subtle rounded-2xl text-text-muted hover:text-brand-primary hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300 disabled:opacity-30;
+}

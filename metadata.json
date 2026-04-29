@@ -1,0 +1,6 @@
+{
+  "name": "SICD Presentation Explorer",
+  "description": "A high-fidelity modern presentation for the SICD inventory modernization project proposal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["presentation-mode", "interactive-ui"]
+}
